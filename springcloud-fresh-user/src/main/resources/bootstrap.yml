@@ -9,4 +9,16 @@ spring:
       name: fresh-user
    cloud: 
       config: 
-         uri: 
+         uri: http://127.0.0.1:5566/
+         label: master
+         name: springcloud-fresh-user
+         profile: dev
+         
+#actuator监控，感应配置中心服务端的变化
+management: 
+   endpoint: 
+      shutdown: 
+         enabled: false
+   endpoints: 
+      refresh: 
+         enabled: true

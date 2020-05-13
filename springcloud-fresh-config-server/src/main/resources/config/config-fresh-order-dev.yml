@@ -7,10 +7,10 @@ spring:
       password: a
       
    http: 
-     encoding: 
-        force: true
-        charset: UTF-8
-        enbaled: true
+      encoding: 
+         force: true
+         charset: UTF-8
+         enbaled: true
       
    session: 
       store-type: redis

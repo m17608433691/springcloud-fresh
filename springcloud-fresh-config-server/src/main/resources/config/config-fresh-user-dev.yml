@@ -7,10 +7,10 @@ spring:
       password: a
       
    http: 
-     encoding: 
-        force: true
-        charset: UTF-8
-        enbaled: true
+      encoding: 
+         force: true
+         charset: UTF-8
+         enbaled: true
       
    session: 
       store-type: redis
@@ -40,7 +40,7 @@ spring:
 # mybatis配置
 mybatis:
    mapper-locations: mapper/*Mapper.xml
-   type-aliases-package: com.yc.fresh.order.entity   # 需要扫描的启用别名的类所在的包
+   type-aliases-package: com.yc.fresh.user.entity   # 需要扫描的启用别名的类所在的包
   
   
 eureka: 
