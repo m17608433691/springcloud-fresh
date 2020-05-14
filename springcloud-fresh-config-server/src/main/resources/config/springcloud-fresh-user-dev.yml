@@ -6,9 +6,6 @@ spring:
       username: root
       password: a
 
-     
-
-      
    http: 
       encoding: 
          force: true
@@ -17,7 +14,6 @@ spring:
       
    session: 
       store-type: redis
-      
       
    redis: 
       database: 0
