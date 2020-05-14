@@ -1,16 +1,18 @@
-spring: 
-   datasource: 
+spring:
+   datasource:   #数据库连接配置
       type: com.alibaba.druid.pool.DruidDataSource
-      driveClassName: com.mysql.cj.jdbc.Driver
+      driverClassName: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://127.0.0.1:3306/project?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
       username: root
       password: a
+
+      
       
    http: 
-     encoding: 
-        force: true
-        charset: UTF-8
-        enbaled: true
+      encoding: 
+         force: true
+         charset: UTF-8
+         enbaled: true
       
    session: 
       store-type: redis
@@ -40,7 +42,7 @@ spring:
 # mybatis配置
 mybatis:
    mapper-locations: mapper/*Mapper.xml
-   type-aliases-package: com.yc.fresh.goods.entity   # 需要扫描的启用别名的类所在的包
+   type-aliases-package: com.yc.fresh.user.entity   # 需要扫描的启用别名的类所在的包
   
   
 eureka: 
