@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 注意：namespace中的值必须是对应接口的全路径，SQL语句中的id值必须是这个接口中对应方法名称 -->
+<mapper namespace="com.yc.fresh.user.mapper.IMemberInfoMapper">
+	<insert id="reg" parameterType="MemberInfo">
+		insert into memberInfo values(0, #{nickName}, '', md5(#{pwd}), #{tel}, #{email}, '', now(), 1)
+	</insert>
+	
+	
+	<!-- 登录 -->
+	<select id="login" resultType="MemberInfo" parameterType="MemberInfo">
+		select mno, nickName, realName, tel, email, photo, date_format(regDate, '%Y-%m-%d %H:%i:%s') regDate from memberInfo
+		where (nickName=#{nickName} or tel=#{nickName} or email=#{nickName}) and pwd=md5(#{pwd})
+	</select>
+</mapper>
