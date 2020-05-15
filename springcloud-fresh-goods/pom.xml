@@ -6,18 +6,15 @@
 	<artifactId>springcloud-fresh-goods</artifactId>
 	<packaging>jar</packaging>
 
-	<name>springcloud-fresh-goods</name>
-	<url>http://maven.apache.org</url>
-
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
 	<parent>
 		<groupId>com.yc</groupId>
 		<artifactId>springcloud-fresh-pom</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
 
 	<dependencies>
 
