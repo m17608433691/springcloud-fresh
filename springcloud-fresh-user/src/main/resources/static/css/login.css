@@ -140,7 +140,6 @@
 .user_error,.pwd_error,.code_error{
 	font-size:14px;
 	color:red;
-	visibility: hidden;/*隐藏 并占据空间*/
 }
 .user_error,.pwd_error{
 	margin-top:5px;

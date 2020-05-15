@@ -1,22 +1,24 @@
 package com.yc.fresh.user.entity;
 
-public class MemberInfo {
+import java.io.Serializable;
+
+public class MemberInfo implements Serializable {
+	private static final long serialVersionUID = 1910513011455062191L;
 	private Integer mno;
 	private String nickName;
+	private String realName;
 	private String pwd;
+	private String tel;
 	private String email;
 	private String photo;
-	private String tel;
-	private Integer status;
-	private String code;
 	private String regDate;
-	private String realName;
-
+	private Integer status;
+	
 	@Override
 	public String toString() {
-		return "MemberInfo [mno=" + mno + ", nickName=" + nickName + ", pwd=" + pwd + ", email=" + email + ", photo="
-				+ photo + ", tel=" + tel + ", status=" + status + ", code=" + code + ", regDate=" + regDate
-				+ ", realName=" + realName + "]";
+		return "MemberInfo [mno=" + mno + ", nickName=" + nickName + ", realName=" + realName + ", pwd=" + pwd
+				+ ", tel=" + tel + ", email=" + email + ", photo=" + photo + ", regDate=" + regDate + ", status="
+				+ status + "]";
 	}
 
 	public Integer getMno() {
@@ -35,12 +37,28 @@ public class MemberInfo {
 		this.nickName = nickName;
 	}
 
+	public String getRealName() {
+		return realName;
+	}
+
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
+
 	public String getPwd() {
 		return pwd;
 	}
 
 	public void setPwd(String pwd) {
 		this.pwd = pwd;
+	}
+
+	public String getTel() {
+		return tel;
+	}
+
+	public void setTel(String tel) {
+		this.tel = tel;
 	}
 
 	public String getEmail() {
@@ -59,12 +77,12 @@ public class MemberInfo {
 		this.photo = photo;
 	}
 
-	public String getTel() {
-		return tel;
+	public String getRegDate() {
+		return regDate;
 	}
 
-	public void setTel(String tel) {
-		this.tel = tel;
+	public void setRegDate(String regDate) {
+		this.regDate = regDate;
 	}
 
 	public Integer getStatus() {
@@ -75,39 +93,10 @@ public class MemberInfo {
 		this.status = status;
 	}
 
-	
-	
-	public String getCode() {
-		return code;
-	}
-
-	public void setCode(String code) {
-		this.code = code;
-	}
-	
-	
-
-	public String getRegDate() {
-		return regDate;
-	}
-
-	public void setRegDate(String regDate) {
-		this.regDate = regDate;
-	}
-
-	public String getRealName() {
-		return realName;
-	}
-
-	public void setRealName(String realName) {
-		this.realName = realName;
-	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((code == null) ? 0 : code.hashCode());
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result + ((mno == null) ? 0 : mno.hashCode());
 		result = prime * result + ((nickName == null) ? 0 : nickName.hashCode());
@@ -129,11 +118,6 @@ public class MemberInfo {
 		if (getClass() != obj.getClass())
 			return false;
 		MemberInfo other = (MemberInfo) obj;
-		if (code == null) {
-			if (other.code != null)
-				return false;
-		} else if (!code.equals(other.code))
-			return false;
 		if (email == null) {
 			if (other.email != null)
 				return false;
@@ -181,25 +165,23 @@ public class MemberInfo {
 			return false;
 		return true;
 	}
-	
-	public MemberInfo(Integer mno, String nickName, String pwd, String email, String photo, String tel, Integer status,
-			String code, String regDate, String realName) {
+
+	public MemberInfo(Integer mno, String nickName, String realName, String pwd, String tel, String email, String photo,
+			String regDate, Integer status) {
 		super();
 		this.mno = mno;
 		this.nickName = nickName;
+		this.realName = realName;
 		this.pwd = pwd;
+		this.tel = tel;
 		this.email = email;
 		this.photo = photo;
-		this.tel = tel;
-		this.status = status;
-		this.code = code;
 		this.regDate = regDate;
-		this.realName = realName;
+		this.status = status;
 	}
 
 	public MemberInfo() {
 		super();
 	}
-	
-	
+
 }

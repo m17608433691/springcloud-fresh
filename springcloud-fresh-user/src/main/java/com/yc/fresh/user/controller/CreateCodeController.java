@@ -100,6 +100,10 @@ public class CreateCodeController {
 		return new Color(r, g, b);
 	}
 
+	/**
+	 * 随机生成验证码的方法
+	 * @return
+	 */
 	private String getRandomCode() {
 		Random rd = new Random();
 		StringBuffer sbf = new StringBuffer();
@@ -108,8 +112,8 @@ public class CreateCodeController {
 			flag = rd.nextInt(3);
 			switch(flag) {
 			case 0 : sbf.append(rd.nextInt(10));break;
-			case 1 : sbf.append((char)rd.nextInt(26) + 65);break;
-			case 2 : sbf.append((char)rd.nextInt(26) + 97);break;
+			case 1 : sbf.append((char)(rd.nextInt(26) + 65));break;
+			case 2 : sbf.append((char)(rd.nextInt(26) + 97));break;
 			}
 		}
 		return sbf.toString();
